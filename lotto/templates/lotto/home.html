@@ -5,6 +5,8 @@
     <title>Title</title>
 </head>
 <body>
-    {{ lotto_number }}
+{% for number in lotto_number %}
+    {{ number }}
+{% endfor %}
 </body>
 </html>
