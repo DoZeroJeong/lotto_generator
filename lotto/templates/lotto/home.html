@@ -1,12 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-{% for number in lotto_number %}
-    {{ number }}
+{% extends 'lotto/base.html' %}
+
+{% block content %}
+
+<table class="table">
+{% for lists in lotto_list %}
+    <tr>
+        <td>{{ forloop.counter }} 번째</td>
+    {% for number in lists %}
+        <td>{{ number }}</td>
+    {% endfor %}
+    </tr>
 {% endfor %}
-</body>
-</html>
+</table>
+{% endblock %}
