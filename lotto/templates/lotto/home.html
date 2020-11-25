@@ -5,7 +5,7 @@
 <table class="table">
 {% for lists in lotto_list %}
     <tr>
-        <td>{{ forloop.counter }} 번째</td>
+        <td>{{ forloop.counter }}</td>
     {% for number in lists %}
         <td>{{ number }}</td>
     {% endfor %}
